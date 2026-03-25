@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
 import { unstable_cache } from "next/cache";
 import { db } from "@/server/db";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 
 export const alt = "Weapon details";
 export const size = { width: 1200, height: 630 };
@@ -78,6 +80,7 @@ export default async function OgImage({
         {/* Top accent line */}
         <div
           style={{
+            display: "flex",
             position: "absolute",
             top: 0,
             left: 0,
@@ -107,14 +110,22 @@ export default async function OgImage({
             {weapon.imageUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={`${process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"}${weapon.imageUrl}`}
+                src={(() => {
+                  try {
+                    const filePath = join(process.cwd(), "public", weapon.imageUrl);
+                    const buf = readFileSync(filePath);
+                    return `data:image/png;base64,${buf.toString("base64")}`;
+                  } catch {
+                    return "";
+                  }
+                })()}
                 alt={weapon.name}
                 width={320}
                 height={320}
                 style={{ objectFit: "contain" }}
               />
             ) : (
-              <div style={{ color: "#6b7280", fontSize: 18 }}>NO IMAGE</div>
+              <div style={{ display: "flex", color: "#6b7280", fontSize: 18 }}>NO IMAGE</div>
             )}
           </div>
 
@@ -130,6 +141,7 @@ export default async function OgImage({
             {/* Type badge */}
             <div
               style={{
+                display: "flex",
                 fontSize: 16,
                 color: "#038adf",
                 letterSpacing: "0.2em",
@@ -143,6 +155,7 @@ export default async function OgImage({
             {/* Weapon name */}
             <div
               style={{
+                display: "flex",
                 fontSize: 48,
                 fontWeight: 700,
                 color: "#e8eaed",
@@ -173,6 +186,7 @@ export default async function OgImage({
                 >
                   <div
                     style={{
+                      display: "flex",
                       fontSize: 14,
                       color: "#6b7280",
                       letterSpacing: "0.2em",
@@ -183,6 +197,7 @@ export default async function OgImage({
                   </div>
                   <div
                     style={{
+                      display: "flex",
                       fontSize: 36,
                       fontWeight: 700,
                       color: "#038adf",
@@ -208,6 +223,7 @@ export default async function OgImage({
         >
           <div
             style={{
+              display: "flex",
               fontSize: 14,
               color: "#6b7280",
               letterSpacing: "0.25em",

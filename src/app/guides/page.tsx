@@ -15,6 +15,13 @@ const guides = [
     date: "March 2026",
   },
   {
+    title: "Warden Boss Guide: Hunt the Hunters",
+    slug: "warden",
+    description: "How to find, fight, and farm every Warden boss. Wraith, Scorch, and Tox breakdowns with map-specific tactics.",
+    category: "Boss Guide",
+    date: "March 2026",
+  },
+  {
     title: "The Assault Rifle Meta",
     slug: "best-assault-rifles",
     description: "Comparing the Impact HAR, Overrun AR, and M77 to find the best mid-range tool.",
