@@ -757,74 +757,194 @@ export default function WardenGuide() {
           Warden-Specific Tactics
         </h2>
 
-        <h3>Wraith Warden (Perimeter)</h3>
-        <ul>
-          <li>
-            <strong>Take the second floor or rooftop.</strong> Never fight
-            the Wraith at ground level. Elevated positions give you sight
-            lines while reducing incoming damage from both the boss and
-            reinforcements.
-          </li>
-          <li>
-            <strong>Ping constantly.</strong> The Wraith goes invisible and
-            spawns decoys. Use the ping system to mark the real one. Recon
-            Echo Pulse is the hard counter.
-          </li>
-          <li>
-            <strong>Open with EMP grenades.</strong> They strip the
-            Wraith&apos;s shield, disrupt its invisibility cycle, and give
-            your team a damage window. This speeds up the fight
-            significantly.
-          </li>
-          <li>
-            <strong>Post a rooftop lookout.</strong> Other squads will
-            rotate toward the gunfire. Have one player watching for incoming
-            threats while the other two focus the boss.
-          </li>
-        </ul>
+        <p>
+          Each Warden demands a different approach. Here&apos;s your
+          map-by-map playbook:
+        </p>
 
-        <h3>Scorch Warden (Dire Marsh)</h3>
-        <ul>
-          <li>
-            <strong>
-              Approach Algae Ponds with a plan, not optimism.
-            </strong>{" "}
-            If you can hear gunfire at the Ponds, there is already a fight
-            happening. Decide whether to engage or wait.
-          </li>
-          <li>
-            <strong>Kill speed is everything.</strong> The central location
-            means every squad on the server can reach you quickly. Burn the
-            boss down fast or you&apos;ll be fighting 2&ndash;3 teams at
-            once.
-          </li>
-          <li>
-            <strong>BR33 + Outland for range.</strong> Maintaining distance
-            from the PvP chaos while still dealing boss damage is the
-            optimal play here.
-          </li>
-        </ul>
+        {/* — Wraith Tactics Card — */}
+        <div className="not-prose cryo-panel my-6 overflow-hidden">
+          <div className="flex items-center justify-between border-b border-border bg-panel/50 px-6 py-3">
+            <span className="font-display text-base font-bold uppercase tracking-wider text-foreground">
+              Wraith Warden
+            </span>
+            <div className="flex gap-2">
+              <span className="rounded bg-accent/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-accent">
+                Perimeter
+              </span>
+              <span className="rounded bg-panel px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-dim">
+                Overflow
+              </span>
+            </div>
+          </div>
+          <div className="grid gap-px bg-border sm:grid-cols-2">
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Position
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Take the 2nd floor or rooftop
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                Never fight at ground level. Elevated positions give sight
+                lines while reducing incoming damage from the boss and
+                reinforcements.
+              </p>
+            </div>
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Tracking
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Ping constantly to find the real one
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                The Wraith goes invisible and spawns decoys. Use the ping
+                system to mark the real boss. Recon Echo Pulse is the hard
+                counter.
+              </p>
+            </div>
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Opener
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Lead with EMP grenades
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                EMPs strip shields, disrupt the invisibility cycle, and
+                create a damage window. This speeds up the fight
+                significantly.
+              </p>
+            </div>
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Defense
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Post a rooftop lookout
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                Other squads will rotate toward the gunfire. One player
+                watches for incoming threats while the other two focus the
+                boss.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        <h3>Tox Warden (Outpost)</h3>
-        <ul>
-          <li>
-            <strong>Use staircases and structural cover.</strong> The Tox
-            Warden&apos;s missile barrages and toxic grenades punish anyone
-            standing in the open. Peek from behind walls and staircases to
-            break line of sight between damage phases.
-          </li>
-          <li>
-            <strong>Watch for environmental damage.</strong> The Dormitories
-            are filled with toxic flowers and spores. You&apos;re taking
-            damage just being in the room. Keep healing topped up.
-          </li>
-          <li>
-            <strong>Hunt the Master Clearance Code.</strong> The Tox Warden
-            has a good chance to drop the red key card needed for restricted
-            extraction sites on Outpost. This alone makes the fight worth
-            it.
-          </li>
-        </ul>
+        {/* — Scorch Tactics Card — */}
+        <div className="not-prose cryo-panel my-6 overflow-hidden">
+          <div className="flex items-center justify-between border-b border-border bg-panel/50 px-6 py-3">
+            <span className="font-display text-base font-bold uppercase tracking-wider text-foreground">
+              Scorch Warden
+            </span>
+            <div className="flex gap-2">
+              <span className="rounded bg-accent/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-accent">
+                Dire Marsh
+              </span>
+              <span className="rounded bg-panel px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-dim">
+                Algae Ponds
+              </span>
+            </div>
+          </div>
+          <div className="grid gap-px bg-border sm:grid-cols-3">
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Approach
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Have a plan, not optimism
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                If you can hear gunfire at the Ponds, there&apos;s already a
+                fight happening. Decide whether to engage or wait it out.
+              </p>
+            </div>
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Priority
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Kill speed is everything
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                Central location means every squad can reach you fast. Burn
+                the boss down or you&apos;ll face 2&ndash;3 teams at once.
+              </p>
+            </div>
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Loadout
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                BR33 + Outland for range
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                Maintain distance from the PvP chaos while still dealing
+                sustained boss damage. Range wins here.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* — Tox Tactics Card — */}
+        <div className="not-prose cryo-panel my-6 overflow-hidden">
+          <div className="flex items-center justify-between border-b border-border bg-panel/50 px-6 py-3">
+            <span className="font-display text-base font-bold uppercase tracking-wider text-foreground">
+              Tox Warden
+            </span>
+            <div className="flex gap-2">
+              <span className="rounded bg-accent/10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-accent">
+                Outpost
+              </span>
+              <span className="rounded bg-panel px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-dim">
+                Dormitories
+              </span>
+            </div>
+          </div>
+          <div className="grid gap-px bg-border sm:grid-cols-3">
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Cover
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Use staircases &amp; structural cover
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                Missile barrages and toxic grenades punish anyone in the
+                open. Peek from behind walls and staircases to break line
+                of sight between damage phases.
+              </p>
+            </div>
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Hazard
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Watch for environmental damage
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                The Dormitories are filled with toxic flowers and spores.
+                You take damage just being in the room. Keep healing topped
+                up constantly.
+              </p>
+            </div>
+            <div className="bg-background p-5">
+              <span className="mb-2 block font-mono text-[10px] uppercase tracking-widest text-accent">
+                Reward
+              </span>
+              <p className="mb-0 text-sm font-bold text-foreground">
+                Hunt the Master Clearance Code
+              </p>
+              <p className="text-dim mt-1 mb-0 text-xs leading-relaxed">
+                The Tox Warden can drop the red key card for restricted
+                Outpost extraction sites. This alone makes the fight worth
+                it.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* ═══════════════════════════════════════════════════
             SECTION 7 — REWARDS
