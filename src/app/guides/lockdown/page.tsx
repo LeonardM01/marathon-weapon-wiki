@@ -136,7 +136,7 @@ export default function LockdownGuide() {
             name: "What is the best loadout for Marathon Lockdown?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "The meta loadout is the BR33 Volley Rifle paired with the Bully SMG for versatility, or the WSTR Combat Shotgun paired with the Longshot Sniper for maximum burst damage.",
+              text: "Top loadouts include the M77 Assault Rifle paired with the WSTR Combat Shotgun for close-range dominance, the BR33 Volley Rifle with the Bully SMG for versatility, or the V22 Volt Thrower with a BR33/Bully for ad clearing.",
             },
           },
           {
@@ -369,8 +369,21 @@ export default function LockdownGuide() {
           enemies at distance.
         </p>
 
-        <h3>Loadout A: Shotgun + Sniper (Highest Burst)</h3>
+        <h3>Loadout A: Assault Rifle + Shotgun (Best Close Range)</h3>
         <div className="not-prose my-6 grid gap-4 md:grid-cols-2">
+          <div className="cryo-panel p-5">
+            <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-accent">
+              Mid Range
+            </span>
+            <p className="mb-2 text-lg font-bold text-foreground">
+              M77 Assault Rifle
+            </p>
+            <p className="text-dim mb-0 text-sm leading-relaxed">
+              The most reliable workhorse in Marathon. Best all-round
+              handling with consistent damage at mid range. Covers you
+              between shotgun engagements and handles PvP at distance.
+            </p>
+          </div>
           <div className="cryo-panel p-5">
             <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-accent">
               Close Range
@@ -382,19 +395,6 @@ export default function LockdownGuide() {
               Double-barreled, fires MIPS rounds. Two devastating shots per
               reload. Melts bot shields and deletes aggressive runners.
               485&nbsp;burst DPS.
-            </p>
-          </div>
-          <div className="cryo-panel p-5">
-            <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-accent">
-              Long Range
-            </span>
-            <p className="mb-2 text-lg font-bold text-foreground">
-              Longshot Sniper Rifle
-            </p>
-            <p className="text-dim mb-0 text-sm leading-relaxed">
-              Semi-automatic with forgiving follow-up shots. Best overall
-              sniper for ranged PvP and safely picking off bots from
-              distance.
             </p>
           </div>
         </div>
@@ -425,6 +425,38 @@ export default function LockdownGuide() {
               Heavy Rounds SMG with the best sustained DPS in its class.
               Flinch effect cripples opponents. Rodeo Mag prestige mod turns
               it into a sustained-fire monster.
+            </p>
+          </div>
+        </div>
+
+        <h3>Loadout C: Volt Thrower + BR33 / Bully (Ad Clear Specialist)</h3>
+        <div className="not-prose my-6 grid gap-4 md:grid-cols-2">
+          <div className="cryo-panel p-5">
+            <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-accent">
+              Close-Mid Range
+            </span>
+            <p className="mb-2 text-lg font-bold text-foreground">
+              V22 Volt Thrower
+            </p>
+            <p className="text-dim mb-0 text-sm leading-relaxed">
+              The best Volt weapon for clearing ads. 152&nbsp;DPS with a
+              smart lock-on system that auto-tracks enemies &mdash; just
+              hold fire and sweep through waves. Melts bot clusters without
+              needing precise aim.
+            </p>
+          </div>
+          <div className="cryo-panel p-5">
+            <span className="mb-1 block font-mono text-[10px] uppercase tracking-widest text-accent">
+              All Range / Backup
+            </span>
+            <p className="mb-2 text-lg font-bold text-foreground">
+              BR33 Volley Rifle or Bully SMG
+            </p>
+            <p className="text-dim mb-0 text-sm leading-relaxed">
+              Pair the Volt Thrower with either the BR33 for all-range
+              versatility and PvP coverage, or the Bully SMG for maximum
+              sustained DPS when the Volt Thrower overheats. Both use
+              different ammo types, so you never compete for reserves.
             </p>
           </div>
         </div>
@@ -553,9 +585,9 @@ export default function LockdownGuide() {
               desc: "Frontline combat specialist. Creates space and dictates fight pace. Strong for pushing through the Purple Commander in Wave 3.",
             },
             {
-              name: "Thief",
+              name: "Assassin",
               tier: "A-TIER",
-              desc: "X-Ray Visor scouts loot through walls. Grapple Device provides vertical escape routes when you get third-partied between ships.",
+              desc: "Active Camo lets the squad reposition undetected between ships or disengage from third-party fights. Minus Sights core grants invisibility after aiming, perfect for picking off bots without drawing PvP attention.",
             },
           ].map((shell) => (
             <div key={shell.name} className="cryo-panel p-5">
@@ -756,56 +788,7 @@ export default function LockdownGuide() {
           </p>
         </TipBox>
 
-        {/* ══════════════════════════════════════════════════════
-            SECTION 6 — PRO STRATEGIES
-        ══════════════════════════════════════════════════════ */}
-
-        <h2 className="mt-16 text-2xl text-accent">
-          Pro Strategies &amp; Tips
-        </h2>
-
-        <h3>During the Event</h3>
-        <ul>
-          <li>
-            <strong>Deploy Triage Med-Drone immediately</strong> when waves
-            start. Proactive healing + Anti-Virus sharing is far more
-            effective than reactive healing.
-          </li>
-          <li>
-            <strong>Focus fire the Purple Shield Commander</strong> in Wave 3.
-            Open with EMP grenades to strip the shield, then coordinate fire.
-            This is the skill check for the entire event.
-          </li>
-          <li>
-            <strong>Don&apos;t split up.</strong> Stay within Med-Drone range.
-            Isolated players get overwhelmed and the Triage can&apos;t sustain
-            everyone.
-          </li>
-          <li>
-            <strong>Use semi-auto fire when possible</strong> to conserve
-            ammo. Full-auto LMGs chew through stacks fast and you have three
-            full ships to clear.
-          </li>
-        </ul>
-
-        <h3>Between Ships</h3>
-        <ul>
-          <li>
-            <strong>Pop Cardio Kicks</strong> the moment you finish a ship.
-            The movement speed burst is critical.
-          </li>
-          <li>
-            <strong>Don&apos;t lose the Lockdown Drive.</strong> Ships 2 and 3
-            require the drive from the previous chest. If you die with it, the
-            attempt is over.
-          </li>
-          <li>
-            <strong>Plan escape routes.</strong> Use Thief&apos;s Grapple for
-            vertical escapes or Assassin&apos;s Camo to disengage from PvP.
-          </li>
-        </ul>
-
-        <h3>Common Mistakes to Avoid</h3>
+        <h2 className="mt-16 text-2xl text-accent">Common Mistakes to Avoid</h2>
         <div className="bg-panel/50 my-8 rounded-r-lg border-l-4 border-danger p-6">
           <ol className="mb-0 list-decimal space-y-3 pl-5">
             <li>
