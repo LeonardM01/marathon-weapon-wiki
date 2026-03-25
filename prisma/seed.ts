@@ -920,6 +920,7 @@ async function main() {
     { slug: "heatsink", name: "Heatsink", type: "CHIP", rarity: "STANDARD", price: 23, description: " Heat Sink — Dealing sustained damage with this weapon reduces your generated heat by a small amount amount.", imageUrl: "https://mods.marathondb.gg/images/heatsink.webp", isUniversal: true, compatibleWeapons: [] },
     { slug: "torch-bug-standard", name: "Torch Bug (Standard)", type: "CHIP", rarity: "STANDARD", price: 23, description: " Challenger Class Asset — Eliminating a hostile causes them to explode.", imageUrl: "https://mods.marathondb.gg/images/torch-bug-enhanced.webp", isUniversal: true, compatibleWeapons: [] },
     { slug: "trigger-discipline", name: "Trigger Discipline (Standard)", type: "CHIP", rarity: "STANDARD", price: 23, description: "Grants a small amount of increased accuracy for the first few rounds of a trigger pull.", imageUrl: "https://mods.marathondb.gg/images/trigger-discipline.webp", isUniversal: true, compatibleWeapons: [] },
+
   ];
 
   console.log(`\nSeeding ${mods.length} mods...`);

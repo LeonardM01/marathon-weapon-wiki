@@ -8,6 +8,13 @@ export const metadata: Metadata = {
 
 const guides = [
   {
+    title: "Lockdown Event: The Definitive Guide",
+    slug: "lockdown",
+    description: "Best loadouts, shell selection, step-by-step walkthrough, and pro strategies for completing all 3 ships in Dire Marsh.",
+    category: "Event Guide",
+    date: "March 2026",
+  },
+  {
     title: "The Assault Rifle Meta",
     slug: "best-assault-rifles",
     description: "Comparing the Impact HAR, Overrun AR, and M77 to find the best mid-range tool.",
